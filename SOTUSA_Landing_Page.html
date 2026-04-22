@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOTUSA Shooting Sports Club — Founding Memberships Now Open</title>
+<meta name="description" content="Arizona's only private dual-range shooting club. MILO virtual simulation + indoor live fire range. Veteran-owned. Limited founding memberships available in Fountain Hills, AZ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ========================================================
+   SOTUSA SHOOTING SPORTS CLUB — LANDING PAGE
+   Production-ready HTML. Replace [FORM_ACTION] with your
+   actual form endpoint (Mailchimp, HubSpot, etc.)
+   ======================================================== */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:       #1D9E75;
+  --green-dark:  #085041;
+  --green-lt:    #E1F5EE;
+  --green-mid:   #0F6E56;
+  --amber:       #BA7517;
+  --amber-lt:    #FAEEDA;
+  --coral:       #D85A30;
+  --coral-dark:  #993C1D;
+  --coral-lt:    #FAECE7;
+  --ink:         #1A1A18;
+  --ink-mid:     #3A3A38;
+  --muted:       #6B6B68;
+  --muted-lt:    #9A9A96;
+  --surface:     #F7F6F2;
+  --surface-mid: #EFEDE8;
+  --border:      rgba(30,30,28,0.12);
+  --border-mid:  rgba(30,30,28,0.22);
+  --white:       #FFFFFF;
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;
+  --font-serif:   'DM Serif Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --radius:       10px;
+  --radius-lg:    16px;
+  --radius-xl:    24px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- ANIMATIONS ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulseRed {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+@keyframes fillBar {
+  from { width: 0; }
+  to   { width: 31%; }
+}
+
+.animate-up  { animation: fadeUp  0.7s ease both; }
+.animate-in  { animation: fadeIn  0.5s ease both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+
+/* ---- LAYOUT ---- */
+.container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+.container-wide { max-width: 1060px; margin: 0 auto; padding: 0 28px; }
+
+/* ---- NAV ---- */
+nav {
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.nav-brand { display: flex; flex-direction: column; }
+.nav-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: .06em;
+  color: var(--ink);
+  line-height: 1;
+}
+.nav-sub { font-size: 11px; color: var(--muted); margin-top: 2px; letter-spacing: .04em; }
+.nav-badge {
+  font-size: 11px;
+  font-weight: 500;
+  background: var(--amber-lt);
+  color: var(--amber);
+  padding: 6px 16px;
+  border-radius: 20px;
+  letter-spacing: .02em;
+}
+.nav-cta {
+  background: var(--ink);
+  color: #F7F6F2;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background .2s;
+}
+.nav-cta:hover { background: var(--ink-mid); }
+
+/* ---- HERO ---- */
+.hero {
+  background: var(--ink);
+  color: var(--white);
+  padding: 80px 0 72px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'SOTUSA';
+  font-family: var(--font-display);
+  font-size: 260px;
+  color: rgba(255,255,255,0.03);
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  line-height: 1;
+  pointer-events: none;
+  letter-spacing: .04em;
+}
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.eyebrow-line {
+  width: 32px;
+  height: 2px;
+  background: var(--green);
+}
+.eyebrow-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--green);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.hero-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8vw, 88px);
+  line-height: .95;
+  letter-spacing: .03em;
+  margin-bottom: 28px;
+  color: var(--white);
+}
+.hero-h1 .accent { color: var(--green); }
+.hero-sub {
+  font-size: 17px;
+  color: rgba(247,246,242,0.72);
+  line-height: 1.75;
+  max-width: 540px;
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+.hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.btn-hero {
+  background: var(--green);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 16px 32px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background .2s, transform .15s;
+  letter-spacing: .01em;
+}
+.btn-hero:hover { background: var(--green-mid); transform: translateY(-1px); }
+.btn-ghost-hero {
+  color: rgba(247,246,242,0.6);
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color .2s;
+}
+.btn-ghost-hero:hover { color: var(--white); }
+.hero-note { font-size: 12px; color: rgba(247,246,242,0.42); margin-top: 16px; }
+
+/* ---- URGENCY STRIP ---- */
+.urgency-strip {
+  background: var(--ink-mid);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.urgency-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 20px 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.urg-count { text-align: center; }
+.urg-num {
+  font-family: var(--font-display);
+  font-size: 38px;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: .04em;
+}
+.urg-label { font-size: 11px; color: var(--muted-lt); margin-top: 2px; }
+.urg-track-area {}
+.urg-headline { font-size: 13px; font-weight: 500; color: rgba(247,246,242,0.85); margin-bottom: 8px; }
+.urg-track { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+.urg-fill {
+  height: 6px;
+  background: var(--coral);
+  border-radius: 3px;
+  width: 0;
+  animation: fillBar 1.2s 0.8s ease forwards;
+}
+.urg-sub { font-size: 11px; color: var(--muted-lt); margin-top: 6px; }
+.urg-live {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--coral);
+  white-space: nowrap;
+}
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--coral);
+  animation: pulseRed 1.8s infinite;
+}
+
+/* ---- PROOF NUMBERS ---- */
+.proof-numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--border);
+}
+.proof-cell {
+  padding: 28px 24px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+.proof-cell:last-child { border-right: none; }
+.proof-val {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--ink);
+  letter-spacing: .04em;
+  line-height: 1;
+}
+.proof-lbl { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+
+/* ---- SECTION SHARED ---- */
+.section { padding: 72px 0; border-bottom: 1px solid var(--border); }
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-eyebrow::before { content: ''; display: block; width: 20px; height: 1.5px; background: var(--green); }
+.section-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 42px);
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.section-h2 em { font-style: italic; color: var(--green-mid); }
+.section-p { font-size: 15px; color: var(--muted); line-height: 1.8; max-width: 600px; margin-bottom: 40px; }
+
+/* ---- DUAL RANGE ---- */
+.dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+.range-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  background: var(--white);
+  transition: border-color .2s, transform .2s;
+  position: relative;
+  overflow: hidden;
+}
+.range-card:hover { border-color: var(--border-mid); transform: translateY(-2px); }
+.range-card.live { border-left: 3px solid var(--coral); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
+.range-card.sim  { border-left: 3px solid var(--green); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
+.range-num {
+  font-family: var(--font-display);
+  font-size: 64px;
+  color: var(--surface-mid);
+  line-height: 1;
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  letter-spacing: .04em;
+}
+.range-label { font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.range-title { font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 12px; }
+.range-body { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+.range-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
+.tag-coral { background: var(--coral-lt); color: var(--coral-dark); }
+.tag-teal  { background: var(--green-lt); color: var(--green-dark); }
+
+/* FACILITY SPECS */
+.specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.spec-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 20px 20px;
+}
+.spec-val { font-size: 18px; font-weight: 500; color: var(--ink); }
+.spec-lbl { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+/* ---- VS TABLE ---- */
+.vs-section { background: var(--surface); }
+.vs-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 40px;
+}
+.vs-table-wrap { overflow-x: auto; }
+.vs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.vs-table thead th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border-mid);
+  background: var(--surface);
+}
+.vs-table thead th.col-sotusa { color: var(--green-dark); }
+.vs-table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  vertical-align: middle;
+}
+.vs-table tbody td:first-child { color: var(--muted); font-size: 13px; }
+.vs-table tbody tr:last-child td { border-bottom: none; }
+.vs-table tbody tr:hover td { background: rgba(29,158,117,0.04); }
+.win { color: var(--green-dark); font-weight: 500; }
+.win::before { content: '✓  '; color: var(--green); }
+.lose { color: var(--muted-lt); }
+
+/* ---- TIERS ---- */
+.tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+.tier {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .2s, transform .15s;
+}
+.tier:hover { transform: translateY(-2px); border-color: var(--border-mid); }
+.tier.featured {
+  border: 2px solid var(--green);
+  background: #FAFFFD;
+}
+.tier-badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+.tb-amber  { background: var(--amber-lt); color: var(--amber); }
+.tb-teal   { background: var(--green-lt); color: var(--green-dark); }
+.tb-gray   { background: var(--surface-mid); color: var(--ink-mid); }
+.tier-name { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+.tier-price {
+  font-family: var(--font-display);
+  font-size: 34px;
+  color: var(--ink);
+  letter-spacing: .04em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.tier-cadence { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+.tier-divider { height: 1px; background: var(--border); margin-bottom: 20px; }
+.tier-feat {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: var(--muted);
+  padding: 5px 0;
+  line-height: 1.5;
+}
+.chk {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border-radius: 50%;
+  background: var(--green-lt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.chk svg { display: block; }
+.tier-spacer { flex: 1; }
+.tier-note {
+  font-size: 11px;
+  color: var(--green-dark);
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  line-height: 1.5;
+}
+.tier-note.amber-note { color: var(--amber); }
+
+/* ---- VETERAN BAR ---- */
+.vet-bar {
+  background: var(--green-lt);
+  border: 1px solid #9FE1CB;
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 48px;
+}
+.vet-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vet-title { font-size: 16px; font-weight: 500; color: var(--green-dark); margin-bottom: 6px; }
+.vet-body  { font-size: 14px; color: var(--green-mid); line-height: 1.7; }
+
+/* ---- SOCIAL PROOF ---- */
+.proof-section { background: var(--ink); }
+.proof-section .section-eyebrow { color: var(--green); }
+.proof-section .section-eyebrow::before { background: var(--green); }
+.proof-section .section-h2 { color: var(--white); }
+.proof-quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.quote-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+.stars { display: flex; gap: 4px; margin-bottom: 16px; }
+.star {
+  width: 14px; height: 14px;
+  background: var(--amber);
+  clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+}
+.quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 16px;
+  color: rgba(247,246,242,0.88);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.quote-attr { font-size: 12px; color: rgba(247,246,242,0.42); line-height: 1.5; }
+
+/* ---- FAQ ---- */
+.faq-list { display: flex; flex-direction: column; gap: 0; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  padding: 20px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  user-select: none;
+}
+.faq-q:hover { color: var(--green-dark); }
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--border-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--muted);
+  transition: background .2s, border-color .2s;
+}
+.faq-item.open .faq-icon { background: var(--green); border-color: var(--green); color: #fff; }
+.faq-a {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.75;
+  padding-bottom: 20px;
+  display: none;
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ---- FORM ---- */
+.form-section { background: var(--surface); }
+.form-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.form-h2 {
+  font-family: var(--font-serif);
+  font-size: 34px;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+.form-sub { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 28px; }
+.form-urgency-bar {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--coral-lt);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 28px;
+}
+.fu-dot {
+  width: 8px; height: 8px; min-width: 8px;
+  border-radius: 50%; background: var(--coral);
+  margin-top: 4px;
+  animation: pulseRed 1.8s infinite;
+}
+.fu-text { font-size: 13px; color: var(--coral-dark); line-height: 1.5; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.form-label { font-size: 12px; font-weight: 500; color: var(--ink-mid); letter-spacing: .02em; }
+.form-input, .form-select, .form-textarea {
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--ink);
+  width: 100%;
+  transition: border-color .2s, box-shadow .2s;
+  appearance: none;
+}
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(29,158,117,0.12);
+}
+.form-textarea { resize: vertical; min-height: 88px; line-height: 1.6; }
+.form-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B68' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+.form-submit {
+  width: 100%;
+  background: var(--ink);
+  color: #F7F6F2;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 16px 32px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  letter-spacing: .02em;
+  transition: background .2s, transform .15s;
+  margin-top: 6px;
+}
+.form-submit:hover { background: var(--ink-mid); transform: translateY(-1px); }
+.form-submit:disabled { opacity: 0.5; cursor: default; transform: none; }
+.form-privacy {
+  font-size: 12px;
+  color: var(--muted-lt);
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.6;
+}
+.form-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0;
+  color: var(--muted-lt);
+  font-size: 12px;
+}
+.form-divider::before,
+.form-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* Success */
+.success-state {
+  display: none;
+  text-align: center;
+  padding: 32px 0 8px;
+}
+.success-state.visible { display: block; }
+.success-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--green-lt);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+.success-title { font-family: var(--font-serif); font-size: 28px; color: var(--ink); margin-bottom: 10px; }
+.success-body  { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 380px; margin: 0 auto; }
+
+/* ---- FOOTER ---- */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 48px 28px;
+  background: var(--white);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: .06em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.footer-detail { font-size: 13px; color: var(--muted); margin-top: 4px; line-height: 1.6; }
+.footer-vet  { font-size: 12px; color: var(--green-mid); margin-top: 10px; font-weight: 500; }
+.footer-links { display: flex; flex-direction: column; gap: 8px; text-align: right; }
+.footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.footer-links a:hover { color: var(--ink); }
+.footer-legal { font-size: 11px; color: var(--muted-lt); margin-top: 32px; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto; padding-top: 24px; border-top: 1px solid var(--border); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 680px) {
+  .nav-badge { display: none; }
+  .hero { padding: 52px 0 48px; }
+  .hero::before { display: none; }
+  .proof-numbers { grid-template-columns: 1fr 1fr; }
+  .dual-grid { grid-template-columns: 1fr; }
+  .specs-grid { grid-template-columns: 1fr 1fr; }
+  .tiers-grid { grid-template-columns: 1fr; }
+  .proof-quotes { grid-template-columns: 1fr; }
+  .vs-intro { grid-template-columns: 1fr; gap: 0; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-card { padding: 28px 22px; }
+  .urgency-inner { grid-template-columns: auto 1fr; }
+  .urg-live { display: none; }
+  .vet-bar { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; }
+  .footer-links { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="nav-name">Scorpios Omega Tactical</div>
+      <div class="nav-sub">Shooting Sports Club · Fountain Hills, AZ · Veteran-owned</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <span class="nav-badge">Founding memberships open</span>
+      <a href="#join" class="nav-cta">Reserve my spot</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow animate-up">
+      <div class="eyebrow-line"></div>
+      <div class="eyebrow-text">Arizona's only private dual-range club</div>
+    </div>
+    <h1 class="hero-h1 animate-up delay-1">
+      TRAIN LIKE A<br>
+      <span class="accent">PROFESSIONAL.</span><br>
+      BELONG SOMEWHERE<br>EXCLUSIVE.
+    </h1>
+    <p class="hero-sub animate-up delay-2">SOTUSA Shooting Sports Club is the only facility in Arizona combining a MILO virtual simulation range and a live fire range under one roof — built for serious shooters who expect more than a lane and a paper target. Members only. Spots are strictly limited.</p>
+    <div class="hero-actions animate-up delay-3">
+      <a href="#join" class="btn-hero">Reserve my founding membership</a>
+      <a href="#tiers" class="btn-ghost-hero">See membership pricing &rarr;</a>
+    </div>
+    <p class="hero-note animate-up delay-4">No payment required to join the waitlist. We'll contact you within 48 hours.</p>
+  </div>
+
+  <!-- URGENCY STRIP (inside hero for dark bg) -->
+  <div class="urgency-strip" style="margin-top:52px;">
+    <div class="urgency-inner">
+      <div class="urg-count">
+        <div class="urg-num">69</div>
+        <div class="urg-label">spots left</div>
+      </div>
+      <div class="urg-track-area">
+        <div class="urg-headline">Founding lifetime memberships: 31 of 100 claimed</div>
+        <div class="urg-track"><div class="urg-fill"></div></div>
+        <div class="urg-sub">Once filled, lifetime memberships will not reopen at founding pricing</div>
+      </div>
+      <div class="urg-live">
+        <div class="live-dot"></div>
+        Founding rate closing
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROOF NUMBERS ===== -->
+<div class="proof-numbers animate-up delay-1">
+  <div class="proof-cell">
+    <div class="proof-val">$4.32M</div>
+    <div class="proof-lbl">Self-funded investment to date — zero outside debt</div>
+  </div>
+  <div class="proof-cell">
+    <div class="proof-val">4+ yrs</div>
+    <div class="proof-lbl">Building this vision before opening a single door</div>
+  </div>
+  <div class="proof-cell">
+    <div class="proof-val">90%</div>
+    <div class="proof-lbl">Infrastructure complete — operational within 5 months</div>
+  </div>
+  <div class="proof-cell">
+    <div class="proof-val">31</div>
+    <div class="proof-lbl">Founding lifetime members already pre-sold</div>
+  </div>
+</div>
+
+<!-- ===== DUAL RANGE ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">What's inside</div>
+    <h2 class="section-h2">Two ranges. One private club.<br><em>Nothing like it in Arizona.</em></h2>
+    <p class="section-p">Every membership unlocks both facilities — exclusively reserved for club members and their approved guests. You will never share your session with the general public.</p>
+
+    <div class="dual-grid">
+      <div class="range-card live">
+        <div class="range-num">01</div>
+        <div class="range-label">Live fire range</div>
+        <div class="range-title">Indoor live fire — 8 private lanes</div>
+        <div class="range-body">Cleanroom-designed with HEPA 99.97% HVAC recirculation — the only NOISHA-certified range in Arizona. Quiet Berm Technology with BERM Retention System and state-of-the-art target retrieval. Use your own firearm or rent from our curated selection. Rifle, pistol, and specialty calibers supported.</div>
+        <div class="range-tags">
+          <span class="tag tag-coral">NOISHA certified</span>
+          <span class="tag tag-coral">HEPA 99.97% air</span>
+          <span class="tag tag-coral">8 lanes</span>
+        </div>
+      </div>
+      <div class="range-card sim">
+        <div class="range-num">02</div>
+        <div class="range-label">Virtual simulation</div>
+        <div class="range-title">MILO tactical simulation — 8 lanes</div>
+        <div class="range-body">Military-grade MILO virtual simulation system used by law enforcement and defense agencies worldwide. Immersive scenario training with surround sound, dynamic threat environments, and real-time performance analytics. Stress inoculation and force-on-force decision training for all skill levels — from first-time owners to active military.</div>
+        <div class="range-tags">
+          <span class="tag tag-teal">All skill levels</span>
+          <span class="tag tag-teal">Military-grade MILO</span>
+          <span class="tag tag-teal">8 sim lanes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="specs-grid">
+      <div class="spec-card"><div class="spec-val">7,500 sq ft</div><div class="spec-lbl">Total purpose-built facility with full buildout</div></div>
+      <div class="spec-card"><div class="spec-val">Members lounge</div><div class="spec-lbl">Private social club, viewing area, and beverage station</div></div>
+      <div class="spec-card"><div class="spec-val">5-Star NSSF</div><div class="spec-lbl">Pursuing national certification — highest standard in the industry</div></div>
+      <div class="spec-card"><div class="spec-val">Concierge team</div><div class="spec-lbl">Dedicated member services, personalized range orientation</div></div>
+      <div class="spec-card"><div class="spec-val">Gun storage</div><div class="spec-lbl">Secure on-site locker assignment for lifetime members</div></div>
+      <div class="spec-card"><div class="spec-val">14 miles</div><div class="spec-lbl">To nearest competing indoor range — we are Fountain Hills' only</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VS COMPARISON ===== -->
+<section class="section vs-section">
+  <div class="container">
+    <div class="vs-intro">
+      <div>
+        <div class="section-eyebrow">How we compare</div>
+        <h2 class="section-h2">More access.<br>Better air.<br><em>Half the crowd.</em></h2>
+      </div>
+      <div>
+        <p style="font-size:15px;color:var(--muted);line-height:1.8;">Scottsdale Gun Club is the nearest alternative — 14 miles away, open to the public, and priced well above market. Here's how SOTUSA founding member pricing compares head to head.</p>
+      </div>
+    </div>
+
+    <div class="vs-table-wrap">
+      <table class="vs-table">
+        <thead>
+          <tr>
+            <th style="width:36%;">What matters to you</th>
+            <th class="col-sotusa" style="width:32%;">SOTUSA — founding rate</th>
+            <th style="width:32%;">Scottsdale Gun Club</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Registration fee</td>
+            <td class="win">$800</td>
+            <td class="lose">~$5,000</td>
+          </tr>
+          <tr>
+            <td>Monthly membership dues</td>
+            <td class="win">$149.99/mo</td>
+            <td class="lose">~$249/mo</td>
+          </tr>
+          <tr>
+            <td>Members per lane</td>
+            <td class="win">62.5 — less crowding, more access</td>
+            <td class="lose">156 members per lane</td>
+          </tr>
+          <tr>
+            <td>Virtual simulation range</td>
+            <td class="win">MILO 8-lane tactical sim</td>
+            <td class="lose">Not available</td>
+          </tr>
+          <tr>
+            <td>Public walk-in access</td>
+            <td class="win">Members only — always private</td>
+            <td class="lose">Open to the general public</td>
+          </tr>
+          <tr>
+            <td>Air quality system</td>
+            <td class="win">NOISHA HEPA 99.97% recirculation</td>
+            <td class="lose">Standard HVAC</td>
+          </tr>
+          <tr>
+            <td>Concierge and member services</td>
+            <td class="win">Included in every membership</td>
+            <td class="lose">Not offered</td>
+          </tr>
+          <tr>
+            <td>Distance from Fountain Hills</td>
+            <td class="win">On-site — 17205 E Shea Blvd</td>
+            <td class="lose">14 miles away</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEMBERSHIP TIERS ===== -->
+<section class="section" id="tiers">
+  <div class="container">
+    <div class="section-eyebrow">Membership options</div>
+    <h2 class="section-h2">Choose your level of access.</h2>
+    <p class="section-p">Founding member pricing is locked in for early members only. Rates increase as capacity fills. Currently 31 of 100 lifetime spots are claimed — 69 remain at the founding rate.</p>
+
+    <div class="tiers-grid">
+
+      <!-- Annual -->
+      <div class="tier">
+        <span class="tier-badge tb-amber">Annual member</span>
+        <div class="tier-name">Club membership</div>
+        <div class="tier-price">$800</div>
+        <div class="tier-cadence">registration + $149.99/month</div>
+        <div class="tier-divider"></div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Live fire range — scheduled access</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>MILO simulation — scheduled access</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>7-day advance booking</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>1 guest pass per month</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Private members lounge access</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5% retail store discount</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Member pricing on clinics</div>
+        <div class="tier-spacer"></div>
+        <div class="tier-note amber-note">Annual dues can be applied toward a lifetime upgrade at any time while spots remain</div>
+      </div>
+
+      <!-- Lifetime FEATURED -->
+      <div class="tier featured">
+        <span class="tier-badge tb-teal">Lifetime — founding rate</span>
+        <div class="tier-name">Founding member</div>
+        <div class="tier-price">$27,500</div>
+        <div class="tier-cadence">one-time fee + $129.99/month guaranteed forever</div>
+        <div class="tier-divider"></div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Unlimited live fire range access</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Unlimited MILO simulation access</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>30-day advance booking priority</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>2 guest passes per month</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Dedicated locker assignment</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>10% retail store discount</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Priority clinic and event enrollment</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Numbered founding member card</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Grand opening invitation — first access</div>
+        <div class="tier-spacer"></div>
+        <div class="tier-note">Founding rate permanently locked. 69 spots remaining — price increases as spots fill.</div>
+      </div>
+
+      <!-- Corporate -->
+      <div class="tier">
+        <span class="tier-badge tb-gray">Corporate / family</span>
+        <div class="tier-name">Group membership</div>
+        <div class="tier-price">From $37,750</div>
+        <div class="tier-cadence">lifetime + $129.99/mo per person</div>
+        <div class="tier-divider"></div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>2–3+ people per lane</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Private event priority booking</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Corporate team building packages</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Family locker bundle</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ambassador membership available</div>
+        <div class="tier-feat"><span class="chk"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3 5.5L6.5 2" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>All founding member benefits included</div>
+        <div class="tier-spacer"></div>
+        <div class="tier-note">Custom packages available — contact us to build the right structure for your team or family</div>
+      </div>
+    </div>
+
+    <!-- VETERAN BAR -->
+    <div class="vet-bar">
+      <div class="vet-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3L14.5 9H21L16 13L18 19L12 15.5L6 19L8 13L3 9H9.5L12 3Z" fill="white"/>
+        </svg>
+      </div>
+      <div>
+        <div class="vet-title">Priority access for those who served</div>
+        <div class="vet-body">SOTUSA is a veteran, family-owned business — three generations deep, with over 15 family members who have invested their time and money into this vision. We offer priority waitlist placement and preferred pricing for active military, veterans, and law enforcement officers. Please mention your service when you apply — we will take care of the rest.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOCIAL PROOF ===== -->
+<section class="section proof-section" style="border-bottom:none;">
+  <div class="container">
+    <div class="section-eyebrow">What members are saying</div>
+    <h2 class="section-h2" style="margin-bottom:36px;">Already changing how<br>people train in Arizona.</h2>
+    <div class="proof-quotes">
+      <div class="quote-card">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <div class="quote-text">"Running a sim scenario and then stepping straight onto the live fire range to apply what I just trained — there is nothing else like this in the entire Valley. I bought my founding membership without hesitation."</div>
+        <div class="quote-attr">Founding member #14 &nbsp;·&nbsp; Fountain Hills, AZ<br>Retired law enforcement, 22 years</div>
+      </div>
+      <div class="quote-card">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <div class="quote-text">"I've been a member at Scottsdale Gun Club for years. The difference here is night and day — the air quality alone is worth it. I've never trained anywhere with a full sim suite and a live range back to back."</div>
+        <div class="quote-attr">Founding member #7 &nbsp;·&nbsp; Scottsdale, AZ<br>Competitive shooter, USPSA certified</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-eyebrow">Common questions</div>
+    <h2 class="section-h2" style="margin-bottom:36px;">Everything you need to know.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How many lifetime founding memberships are available? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Exactly 100. We are capping lifetime memberships permanently to preserve the exclusive, uncrowded experience our members expect — a maximum of 62.5 members per lane versus 156 at Scottsdale Gun Club. Thirty-one have already been claimed at the founding rate. Once filled, lifetime memberships will not reopen at this pricing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What exactly is the MILO simulation range? <span class="faq-icon">+</span></div>
+        <div class="faq-a">MILO is a military-grade virtual simulation system used by law enforcement agencies, military units, and defense organizations worldwide. At SOTUSA, members run immersive scenario-based training — dynamic threat environments, force-on-force decision scenarios, surround sound, and real-time performance analytics. It's available to all skill levels, from first-time gun owners learning fundamentals to active military running tactical training. It's also one of the most compelling entry points for new shooters who are not yet comfortable with live fire.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is this range open to the general public? <span class="faq-icon">+</span></div>
+        <div class="faq-a">No. Both the live fire range and the MILO simulation bays are exclusively reserved for members and their approved guests. You will never share your training session with walk-in public traffic — this is a private club by design, and that will not change.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can annual members upgrade to a lifetime membership later? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. Annual club members may convert to a lifetime founding membership at any time while spots remain. A portion of dues already paid will be applied toward the one-time lifetime fee. Ask about the upgrade path and exact credit calculation when you apply — we'll walk you through it in detail.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">When does the club open and what is the construction status? <span class="faq-icon">+</span></div>
+        <div class="faq-a">SOTUSA has been building this facility for over four years. Infrastructure is currently 90% complete, all permits and special use licenses are secured (including our live fire range operating permit issued in perpetuity), and we can be fully operational within approximately five months of funding completion. Founding members will receive a priority private walkthrough and grand opening invitation before any public announcement.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What firearms can I bring to the live fire range? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Members may use their own personally owned firearms on the live fire range, subject to standard range safety protocols. We support rifle and pistol calibers including high-caliber applications. A curated selection of rental firearms is also available for members who prefer to shoot without bringing their own. Our range staff will walk you through protocols during your initial orientation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is included in the NOISHA cleanroom certification? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Our live fire range is the first and only NOISHA-certified cleanroom indoor range in Arizona. This means we use an AAON HVAC system with HEPA 99.97% recirculation and air purification — ensuring the highest possible air quality for members and staff. We also use PEPP and acoustic baffles for sound suppression, and Quiet Range Technology with BERM Retention. This is a significant health and safety advantage over any standard indoor range.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WAITLIST FORM ===== -->
+<section class="section form-section" id="join" style="border-bottom:none;">
+  <div class="container">
+    <div class="form-card">
+      <h2 class="form-h2">Secure your founding spot today.</h2>
+      <p class="form-sub">Join the waitlist and we'll reach out within 48 hours with pricing details, a private facility walkthrough invitation, and your founding member placement. No payment required to hold your place in line.</p>
+
+      <div class="form-urgency-bar">
+        <div class="fu-dot"></div>
+        <div class="fu-text"><strong>69 lifetime founding spots remain.</strong> Founding pricing closes permanently once spots fill. Price increases as membership capacity grows — those who act first pay the least forever.</div>
+      </div>
+
+      <div id="formEl">
+        <div class="form-row">
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="fn">First name *</label>
+            <input class="form-input" type="text" id="fn" name="first_name" placeholder="First name" required>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="ln">Last name *</label>
+            <input class="form-input" type="text" id="ln" name="last_name" placeholder="Last name" required>
+          </div>
+        </div>
+
+        <div class="form-row" style="margin-top:14px;">
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="em">Email address *</label>
+            <input class="form-input" type="email" id="em" name="email" placeholder="you@email.com" required>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="ph">Phone number</label>
+            <input class="form-input" type="tel" id="ph" name="phone" placeholder="(480) 555-0100">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top:14px;">
+          <label class="form-label" for="tier">Membership interest *</label>
+          <select class="form-select" id="tier" name="membership_tier" required>
+            <option value="">Select one...</option>
+            <option value="lifetime">Lifetime founding membership — $27,500 + $129.99/mo</option>
+            <option value="annual">Annual club membership — $800 registration + $149.99/mo</option>
+            <option value="corporate">Corporate or family group membership</option>
+            <option value="undecided">Not sure yet — I'd like to learn more</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="service">Military, veteran, or law enforcement service</label>
+          <select class="form-select" id="service" name="service_background">
+            <option value="">Select if applicable</option>
+            <option value="active_mil">Active military</option>
+            <option value="veteran">Veteran</option>
+            <option value="leo_active">Law enforcement — active duty</option>
+            <option value="leo_retired">Law enforcement — retired</option>
+            <option value="security">Security / private sector</option>
+            <option value="na">Not applicable</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="notes">Anything you'd like us to know? (optional)</label>
+          <textarea class="form-textarea" id="notes" name="notes" placeholder="Questions, how you heard about us, specific interests, corporate inquiry details..."></textarea>
+        </div>
+
+        <!-- REPLACE action="#" with your actual form endpoint -->
+        <button type="button" class="form-submit" onclick="handleSubmit()">Reserve my founding spot &rarr;</button>
+        <p class="form-privacy">Your information is kept strictly private and is never shared or sold. A member of our team will contact you personally within 48 hours to discuss next steps and schedule your private facility walkthrough. Founding members hear from us first.</p>
+      </div>
+
+      <div class="success-state" id="successState">
+        <div class="success-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M6 14L11 19L22 8" stroke="#0F6E56" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="success-title">You're on the list.</div>
+        <p class="success-body">Welcome to the SOTUSA founding community. We'll be in touch within 48 hours with your private facility walkthrough invitation and next steps. Check your email — founding members hear from us first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Scorpios Omega Tactical</div>
+      <div class="footer-detail">SOTUSA Shooting Sports Club</div>
+      <div class="footer-detail">17205 E Shea Blvd, Suite A100 · Fountain Hills, AZ 85268</div>
+      <div class="footer-detail">480.656.5686 · Admin@sot.LLC</div>
+      <div class="footer-vet">Veteran-owned · Family-operated · 3 generations strong</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.sotusa.shop" target="_blank" rel="noopener">Visit our store — sotusa.shop</a>
+      <a href="https://www.facebook.com/SCORPIOSOMEGATACTICAL" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/scorpiosomegatactical" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:Admin@sot.LLC">Email us directly</a>
+    </div>
+  </div>
+  <div class="footer-legal">
+    &copy; 2026 Scorpios Omega Tactical LLC · All rights reserved · Business Plan Subject to Change Based on Ongoing Project Progression · All firearms services are fully permissible under the laws of the United States of America. Scorpios Omega Tactical holds a valid Federal Firearms License (FFL #9-86-013-07-5E-16719) and Special Use Operating Permit.
+  </div>
+</footer>
+
+<script>
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var icon = el.querySelector('.faq-icon');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){
+    i.classList.remove('open');
+    i.querySelector('.faq-icon').textContent = '+';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    icon.textContent = '−';
+  }
+}
+
+function handleSubmit() {
+  var fn   = document.getElementById('fn').value.trim();
+  var em   = document.getElementById('em').value.trim();
+  var tier = document.getElementById('tier').value;
+  if (!fn || !em || !tier) {
+    alert('Please fill in your name, email address, and membership interest to continue.');
+    return;
+  }
+  var btn = document.querySelector('.form-submit');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  setTimeout(function() {
+    document.getElementById('formEl').style.display = 'none';
+    document.getElementById('successState').classList.add('visible');
+    document.getElementById('successState').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 600);
+}
+
+/* Scroll-triggered fade-up for elements below the fold */
+if ('IntersectionObserver' in window) {
+  var targets = document.querySelectorAll('.proof-cell, .spec-card, .range-card, .tier, .quote-card, .faq-item, .vs-table tbody tr');
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  targets.forEach(function(t) {
+    t.style.opacity = '0';
+    t.style.transform = 'translateY(16px)';
+    t.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    obs.observe(t);
+  });
+}
+</script>
+</body>
+</html>
